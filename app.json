@@ -1,9 +1,10 @@
 {
   "expo": {
-    "name": "snapchat",
-    "slug": "snapchat",
+    "name": "JustTalk!",
+    "slug": "justtalk!",
     "version": "1.0.0",
     "orientation": "portrait",
+    "owner": "rananomanabbas",
     "icon": "./src/assets/Images/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
