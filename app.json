@@ -1,15 +1,17 @@
 {
   "expo": {
-    "name": "justtalk",
-    "slug": "justtalk",
+    "name": "JustTalk!",
+    "slug": "justtalk!",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "owner": "rananomanabbas",
+    "icon": "./src/assets/Images/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./src/assets/Images/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#111820"
+      "backgroundColor": "#ffffff"
+
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -22,7 +24,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./src/assets/Images/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       }
     },
