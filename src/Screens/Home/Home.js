@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { View, Text, Button } from "react-native";
-import styles from "./styles";
+import styles from "../styles";
 const Home = () => {
 	const [myNum, setNum] = useState(10);
 	const changeNum = () => {
