@@ -1,19 +1,9 @@
-import { ImagePickerIOS, StyleSheet, Text, TextInput, View } from "react-native";
+import { StyleSheet, Text, TextInput, View } from "react-native";
 import React from "react";
-<<<<<<< Updated upstream
 import styles from "../Home/styles";
-
-const Login = () => {
-	return (
-		<View style={styles.myStyle}>
-			<Text>login</Text>
-		</View>
-	);
-};
-=======
-import styles from "../../Home/styles";
 import ImagesPath from "../../Constants/ImagesPath";
 import { Image } from "react-native";
+
 const Login = () => {
   return (
     <View style={styles.myStyle}>
@@ -64,6 +54,5 @@ const style = StyleSheet.create({
   }
 
 })
->>>>>>> Stashed changes
 
 export default Login;
