@@ -14,10 +14,7 @@ const InitialScreen = ({ navigation }) => {
 	ImagesPath;
 	// const { navigation } = props.navigation;
 	return (
-		<ImageBackground
-			style={{ flex: 1, justifyContent: "flex-end" }}
-			source={ImagesPath.bgImage}
-		>
+		<View style={{ flex: 1, justifyContent: "center" }}>
 			<SafeAreaView>
 				<TouchableOpacity
 					style={styles.btn}
@@ -32,7 +29,7 @@ const InitialScreen = ({ navigation }) => {
 					<Text style={styles.text}>Sign Up</Text>
 				</TouchableOpacity>
 			</SafeAreaView>
-		</ImageBackground>
+		</View>
 	);
 };
 
@@ -47,6 +44,7 @@ const styles = StyleSheet.create({
 	},
 	btn1: {
 		height: 48,
+		marginTop: 50,
 		backgroundColor: colors.blue,
 		alignItems: "center",
 		justifyContent: "center",
