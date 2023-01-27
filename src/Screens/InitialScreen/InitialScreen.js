@@ -1,11 +1,4 @@
-import {
-	StyleSheet,
-	Text,
-	View,
-	ImageBackground,
-	SafeAreaView,
-	TouchableOpacity,
-} from "react-native";
+import { StyleSheet, Text, SafeAreaView, TouchableOpacity } from "react-native";
 import React from "react";
 import ImagesPath from "../../Constants/ImagesPath";
 import colors from "../../styles/colors";
@@ -14,22 +7,22 @@ const InitialScreen = ({ navigation }) => {
 	ImagesPath;
 	// const { navigation } = props.navigation;
 	return (
-		<ImageBackground
-			style={{ flex: 1, justifyContent: "flex-end" }}
-			source={ImagesPath.bgImage}
-		>
+		<>
 			<SafeAreaView>
 				<TouchableOpacity
 					style={styles.btn}
-					onPress={() => navigation.navigate("Home")}
+					onPress={() => navigation.navigate("login")}
 				>
 					<Text style={styles.text}>Login</Text>
 				</TouchableOpacity>
-				<TouchableOpacity style={styles.btn1} onPress={() => navigation.navigate("login")}>
+				<TouchableOpacity
+					style={styles.btn1}
+					onPress={() => navigation.navigate("Login")}
+				>
 					<Text style={styles.text}>Sign Up</Text>
 				</TouchableOpacity>
 			</SafeAreaView>
-		</ImageBackground>
+		</>
 	);
 };
 
