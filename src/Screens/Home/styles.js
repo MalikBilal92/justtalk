@@ -3,8 +3,8 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   myStyle: {
     flex: 1,
-    backgroundColor: "pink",
-    justifyContent: "center",
+    backgroundColor: "white",
+    // justifyContent: "center",
     alignItems: "center",
   },
   btnStyle: {
