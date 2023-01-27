@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
-import styles from "../Home/styles";
+import styles from "../styles";
 const Signup = () => {
 	return (
 		<View style={styles.myStyle}>
@@ -10,5 +10,3 @@ const Signup = () => {
 };
 
 export default Signup;
-
-// const styles = StyleSheet.create({});
