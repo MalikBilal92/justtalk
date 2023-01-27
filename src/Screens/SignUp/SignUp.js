@@ -1,12 +1,12 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
-import styles from "../../Home/styles";
+import styles from "../Home/styles";
 const Signup = () => {
-  return (
-    <View style={styles.myStyle}>
-      <Text>signup</Text>
-    </View>
-  );
+	return (
+		<View style={styles.myStyle}>
+			<Text>signup</Text>
+		</View>
+	);
 };
 
 export default Signup;
