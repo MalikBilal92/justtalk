@@ -2,5 +2,5 @@ export default {
 	INITIAL_SCREEN: "InitialScreen",
 	LOGIN: "login",
 	SIGNUP: "signup",
-	HOME: "Home",
+	HOME: "home",
 };
