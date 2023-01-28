@@ -9,7 +9,7 @@ export default {
 	kittyChats: require("../assets/Images/KittyChats/3x.png"),
 	pineAppleParty: require("../assets/Images/PineAppleParty/3x.png"),
 	raveRoom: require("../assets/Images/RaveRoom/3x.png"),
-	// bdParty: require("../assets/Images/"),
+	logo: require("../assets/Images/Logo/3x.png"),
 	// bdParty: require("../assets/Images/check-circle/ss.png"),
 	// bdParty: require("../assets/Images/check-circle/ss.png"),
 };
