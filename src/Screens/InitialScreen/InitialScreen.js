@@ -6,7 +6,7 @@ import {
 	TouchableOpacity,
 } from "react-native";
 import { useState } from "react";
-import ContentPopUp from "../../Components/ContentPopUP";
+import ContentPopUp from "../../Components/ContentPopUp";
 import colors from "../../styles/colors";
 
 const InitialScreen = ({ navigation }) => {
