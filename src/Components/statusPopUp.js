@@ -14,11 +14,11 @@ import navigationStrings from "../Constants/navigationStrings";
 import ImagesPath from "../Constants/ImagesPath";
 import BtnComp from "./btnComp";
 const { width } = Dimensions.get("window");
-
+import { useNavigation } from "@react-navigation/native";
 // create a component
-const StatusPopUp = ({ navigation }) => {
+const StatusPopUp = () => {
 	const [isModalVisible, setModalVisible] = useState(true);
-
+	const navigation = useNavigation();
 	const toggleModalVisibility = () => {
 		setModalVisible(!isModalVisible);
 		navigation.navigate("login");
@@ -34,10 +34,7 @@ const StatusPopUp = ({ navigation }) => {
 			>
 				<View style={styles.viewWrapper}>
 					<View style={styles.modalView}>
-						<Image
-							style={styles.doneImage}
-							source={ImagesPath.confirmationDone}
-						/>
+						<Image style={styles.checkImage} source={ImagesPath.checkCircle} />
 						<Text style={styles.heading}>
 							Password reset link sent to your email
 						</Text>
@@ -64,8 +61,6 @@ const styles = StyleSheet.create({
 	},
 	modalView: {
 		alignItems: "center",
-		// justifyContent: "center",
-		// position: "absolute",
 		top: "40%",
 		left: "40%",
 		elevation: 5,
@@ -75,9 +70,9 @@ const styles = StyleSheet.create({
 		backgroundColor: "#fff",
 		borderRadius: 60,
 	},
-	doneImage: {
-		width: 100,
-		height: 100,
+	checkImage: {
+		width: 65,
+		height: 65,
 		marginVertical: 30,
 	},
 	heading: {
