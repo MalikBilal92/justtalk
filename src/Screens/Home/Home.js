@@ -46,7 +46,7 @@ function Home() {
 	];
 	return (
 		<Wrapper isMain style={[{}]}>
-			<StatusBar backgroundColor={colors.yellow} />
+			<StatusBar backgroundColor={'#F6CD5B'} />
 			<View style={{ flex: 0.2 }}>
 				<Text style={styles.chatRoomText}>These Chatrooms, You Bet!</Text>
 				<Text style={styles.jionRoomText}>Join Any Room Now</Text>
