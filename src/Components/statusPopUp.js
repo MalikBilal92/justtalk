@@ -5,21 +5,23 @@ import {
 	StyleSheet,
 	Modal,
 	View,
-	TextInput,
+	Text,
+	Image,
 	Dimensions,
 	SafeAreaView,
 } from "react-native";
 import navigationStrings from "../Constants/navigationStrings";
-
+import ImagesPath from "../Constants/ImagesPath";
+import BtnComp from "./btnComp";
 const { width } = Dimensions.get("window");
 
 // create a component
-const statusPopUp = ({ navigation }) => {
+const StatusPopUp = ({ navigation }) => {
 	const [isModalVisible, setModalVisible] = useState(true);
 
 	const toggleModalVisibility = () => {
 		setModalVisible(!isModalVisible);
-		// navigation.navigate("signup");
+		navigation.navigate("login");
 	};
 
 	return (
@@ -32,13 +34,19 @@ const statusPopUp = ({ navigation }) => {
 			>
 				<View style={styles.viewWrapper}>
 					<View style={styles.modalView}>
-						<TextInput
-							placeholder="Set Counter..."
-							// value={inputCountValue}
-							style={styles.textInput}
-							onChangeText={(value) => setInputCountValue(value)}
+						<Image
+							style={styles.doneImage}
+							source={ImagesPath.confirmationDone}
 						/>
-						<Button title="Close" onPress={toggleModalVisibility} />
+						<Text style={styles.heading}>
+							Password reset link sent to your email
+						</Text>
+						<BtnComp
+							name="Continue"
+							onPress={toggleModalVisibility}
+							buttonColor="#363333"
+							textColor="white"
+						></BtnComp>
 					</View>
 				</View>
 			</Modal>
@@ -48,12 +56,6 @@ const statusPopUp = ({ navigation }) => {
 
 // define your styles
 const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		justifyContent: "center",
-		alignItems: "center",
-		backgroundColor: "#2c3e50",
-	},
 	viewWrapper: {
 		flex: 1,
 		alignItems: "center",
@@ -62,18 +64,31 @@ const styles = StyleSheet.create({
 	},
 	modalView: {
 		alignItems: "center",
-		justifyContent: "center",
+		// justifyContent: "center",
 		// position: "absolute",
 		top: "40%",
 		left: "40%",
 		elevation: 5,
 		transform: [{ translateX: -(width * 0.4) }, { translateY: -90 }],
-		height: 350,
+		height: 400,
 		width: width,
 		backgroundColor: "#fff",
-		borderRadius: 7,
+		borderRadius: 60,
+	},
+	doneImage: {
+		width: 100,
+		height: 100,
+		marginVertical: 30,
+	},
+	heading: {
+		fontSize: 24,
+		fontStyle: "Bold",
+		fontWeight: "bold",
+		marginVertical: 25,
+		textAlign: "center",
+		marginHorizontal: 70,
 	},
 });
 
 //make this component available to the app
-export default statusPopUp;
+export default StatusPopUp;
