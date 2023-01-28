@@ -1,17 +1,26 @@
+import { useNavigation } from "@react-navigation/native";
 import React, { useRef, useState } from "react";
-import { View, Text, StatusBar, TouchableOpacity, Image } from "react-native";
+import {
+	View,
+	Text,
+	StyleSheet,
+	TouchableOpacity,
+	Image,
+	SafeAreaView,
+} from "react-native";
 import { height, totalSize, width } from "react-native-dimension";
-import { Buttons, Wrapper, Spacer } from "../../Components";
-import RBSheet from "react-native-raw-bottom-sheet";
-import { BackgroundImage } from "@rneui/base";
+import ImagesPath from "../../Constants/ImagesPath";
+import navigationStrings from "../../Constants/navigationStrings";
 function Home() {
 	const refRBSheet = useRef();
-	// const arr=new Array(7);
+	const navigation = useNavigation();
 	const [data, setData] = useState("");
 	console.log("data on home", data);
 	const angle = 360 / 7;
 	const circleDiameter = width(78);
 	const circleRadius = width(39);
+	const [handleshow, setHandleshow] = useState(false);
+
 	const arr = [
 		{
 			image: ImagesPath.houseParty,
@@ -43,8 +52,8 @@ function Home() {
 		},
 	];
 	return (
-		<Wrapper isMain style={[{}]}>
-			<StatusBar backgroundColor={"#F6CD5B"} />
+		<SafeAreaView style={{ flex: 1 }}>
+			{/* <StatusBar backgroundColor={"#F6CD5B"} /> */}
 			<View style={{ flex: 0.2 }}>
 				<Text style={styles.chatRoomText}>These Chatrooms, You Bet!</Text>
 				<Text style={styles.jionRoomText}>Join Any Room Now</Text>
@@ -63,14 +72,14 @@ function Home() {
 						marginTop: height(6),
 					}}
 				>
-					<Image source={appImages.logo} style={styles.imageStyle} />
+					<Image source={ImagesPath.logo} style={styles.imageStyle} />
 					{arr.map((item, index) => {
 						return (
 							<TouchableOpacity
 								onPress={() => {
 									console.log("pressed", item),
 										setData(item),
-										refRBSheet.current.open();
+										setHandleshow(!handleshow);
 								}}
 								style={{
 									justifyContent: "center",
@@ -89,50 +98,19 @@ function Home() {
 						);
 					})}
 				</View>
-				<RBSheet
-					ref={refRBSheet}
-					closeOnDragDown={true}
-					closeOnPressMask={true}
-					height={height(57.5)}
-					customStyles={{
-						container: {
-							justifyContent: "center",
-							alignItems: "center",
-							borderTopLeftRadius: 45,
-							borderTopRightRadius: 45,
-							// backgroundColor:'red'
-						},
-						wrapper: {
-							backgroundColor: "transparent",
-						},
-					}}
-				>
-					<BackgroundImage source={data.image} style={styles.rbBGImageStyle}>
-						<View style={styles.rbNameMainView}>
-							<Text style={styles.rbNameText}>{data.name}</Text>
-							<Text style={styles.membersText}>
-								136 members joined the room
-							</Text>
-							<View style={{ paddingHorizontal: width(9) }}>
-								<Buttons.Colored
-									text="START TALK"
-									textStyle={{ fontSize: fontSize.h8, color: colors.welcome }}
-									buttonStyle={{
-										backgroundColor: colors.yellow,
-										marginVertical: height(5),
-									}}
-									onPress={() => (
-										refRBSheet.current.close(),
-										navigate(routes.chat, { data: data })
-									)}
-								/>
-							</View>
-							<Spacer isDoubleBase />
-						</View>
-					</BackgroundImage>
-				</RBSheet>
+
+				{handleshow && (
+					<ContentPopUp
+						name={data.name}
+						Description={"136 members joined the room"}
+						image={data.image}
+						omPress={navigation.navigate(navigationStrings.INITIAL_SCREEN, {
+							data: data,
+						})}
+					/>
+				)}
 			</View>
-		</Wrapper>
+		</SafeAreaView>
 	);
 }
 
@@ -141,16 +119,14 @@ export default Home;
 const styles = StyleSheet.create({
 	chatRoomText: {
 		textAlign: "center",
-		fontFamily: fontFamily.appTextBold,
 		fontSize: totalSize(2.8),
-		color: colors.welcome,
+		color: "#111820",
 		marginTop: height(4),
 	},
 	jionRoomText: {
 		textAlign: "center",
-		fontFamily: fontFamily.appTextBold,
 		fontSize: totalSize(2),
-		color: colors.welcome,
+		color: "#111820",
 		marginVertical: height(2),
 	},
 	rbBGImageStyle: {
@@ -166,27 +142,24 @@ const styles = StyleSheet.create({
 	rbNameText: {
 		marginTop: height(3),
 		textAlign: "center",
-		fontFamily: fontFamily.appTextBold,
-		color: colors.black,
+		color: "#111820",
 		fontSize: totalSize(3),
 	},
 	membersText: {
 		marginTop: height(2),
 		textAlign: "center",
-		fontFamily: fontFamily.appTextRegular,
-		color: colors.black,
+		color: "#111820",
 		fontSize: totalSize(1.9),
 	},
 	circleImageStyle: {
-		height: totalSize(6),
-		width: totalSize(6),
+		height: totalSize(8),
+		width: totalSize(8),
 		borderRadius: 100,
 	},
 	roomNameText: {
-		fontFamily: fontFamily.appTextBold,
 		fontSize: totalSize(1.3),
-		color: colors.welcome,
-		marginTop: height(1),
+		color: "#111820",
+		// marginTop: height(0.5),
 	},
 	imageStyle: { height: totalSize(15), width: totalSize(15) },
 });
