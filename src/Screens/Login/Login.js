@@ -1,13 +1,12 @@
-import { StyleSheet, Text, TextInput, View } from "react-native";
+import { Button, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 import React from "react";
 import styles from "../styles";
 import ImagesPath from "../../Constants/ImagesPath";
 import { Image } from "react-native";
 
-const Login = () => {
+const Login = ({navigation}) => {
 	return (
 		<View style={styles.myStyle}>
-			<Text>Code working Perfectly but your partner is Just Dash</Text>
 			<Image source={ImagesPath.iconImage} style={{ marginTop: 100 }} />
 			<Text style={styles.txt}>Welcome to Login!</Text>
 			<View>
@@ -23,6 +22,29 @@ const Login = () => {
 					placeholder="Password"
 				/>
 			</View>
+			<View style={styles.row}>
+<Text style={styles.ft1}> Remember me</Text>
+		
+			<TouchableOpacity style={styles.button} >
+        <Text style={styles.ft}>Forgot Password?</Text>
+      </TouchableOpacity>
+	  </View>
+
+	  <View>
+	  <TouchableOpacity style={styles.button1} >
+        <Text style={styles.ft2}>LOG IN</Text>
+      </TouchableOpacity>
+	
+	  </View>
+	  <View style={styles.fv}>
+		<Text style={styles.acc}> 
+			Don't have an account?
+		</Text>
+	  <TouchableOpacity style={styles.button3} onPress={() => navigation.navigate("newaccount")} >
+        <Text style={styles.ft3}>CREATE AN ACCOUNT</Text>
+      </TouchableOpacity>
+	
+	  </View>
 		</View>
 	);
 };
