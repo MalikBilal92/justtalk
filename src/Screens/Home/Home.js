@@ -1,18 +1,11 @@
 import { useNavigation } from "@react-navigation/native";
-import React, { useRef, useState } from "react";
-import {
-	View,
-	Text,
-	StyleSheet,
-	TouchableOpacity,
-	Image,
-	SafeAreaView,
-} from "react-native";
+import React, { useState } from "react";
+import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
 import { height, totalSize, width } from "react-native-dimension";
 import ImagesPath from "../../Constants/ImagesPath";
+import ContentPopUp from "../../Components/ContentPopUp";
 import navigationStrings from "../../Constants/navigationStrings";
 function Home() {
-	const refRBSheet = useRef();
 	const navigation = useNavigation();
 	const [data, setData] = useState("");
 	console.log("data on home", data);
@@ -20,40 +13,57 @@ function Home() {
 	const circleDiameter = width(78);
 	const circleRadius = width(39);
 	const [handleshow, setHandleshow] = useState(false);
-
 	const arr = [
 		{
 			image: ImagesPath.houseParty,
+			poster: ImagesPath.housePartyPosters,
 			name: "House Party",
 		},
 		{
+			poster: ImagesPath.kittyChatsPosters,
 			image: ImagesPath.kittyChats,
 			name: "Kitty Chats",
 		},
 		{
+			poster: ImagesPath.foodClubPosters,
 			image: ImagesPath.foodClub,
 			name: "Food Club",
 		},
 		{
+			poster: ImagesPath.bdPartyPosters,
 			image: ImagesPath.bdParty,
 			name: "Birthday Party",
 		},
 		{
+			poster: ImagesPath.raveRoomPosters,
 			image: ImagesPath.raveRoom,
 			name: "Rave Room",
 		},
 		{
+			poster: ImagesPath.pineApplePartyPosters,
 			image: ImagesPath.pineAppleParty,
 			name: "Pineapple Party",
 		},
 		{
+			poster: ImagesPath.frindSquadPosters,
 			image: ImagesPath.frindSquad,
 			name: "Friends Squad",
 		},
 	];
 	return (
-		<SafeAreaView style={{ flex: 1 }}>
-			{/* <StatusBar backgroundColor={"#F6CD5B"} /> */}
+		<View style={{ flex: 1 }}>
+			<View style={{ backgroundColor: "#F6CD5B", height: 140 }}>
+				<Image
+					source={ImagesPath.logo2}
+					style={{
+						width: 180,
+						height: 50,
+						marginTop: 65,
+						marginLeft: 20,
+						position: "absolute",
+					}}
+				/>
+			</View>
 			<View style={{ flex: 0.2 }}>
 				<Text style={styles.chatRoomText}>These Chatrooms, You Bet!</Text>
 				<Text style={styles.jionRoomText}>Join Any Room Now</Text>
@@ -103,14 +113,12 @@ function Home() {
 					<ContentPopUp
 						name={data.name}
 						Description={"136 members joined the room"}
-						image={data.image}
-						omPress={navigation.navigate(navigationStrings.INITIAL_SCREEN, {
-							data: data,
-						})}
+						image={data.poster}
+						data={data}
 					/>
 				)}
 			</View>
-		</SafeAreaView>
+		</View>
 	);
 }
 
