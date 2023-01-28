@@ -26,48 +26,48 @@ const styles = StyleSheet.create({
 		backgroundColor: "#fafafa",
 		paddingLeft: 10,
 	},
-	btn:{
+	btn: {
 
-backgroundColor: 'black',
-color:"blue"
-// fontSize:24,
-// width:20,
-// height:20,
-},
+		backgroundColor: 'black',
+		color: "blue"
+		// fontSize:24,
+		// width:20,
+		// height:20,
+	},
 	text: {
 		color: 'Black',
 	},
-	ft:{
-		marginTop:20,
-		marginLeft:90,
-		fontWeight:"bold"
+	ft: {
+		marginTop: 20,
+		marginLeft: 90,
+		fontWeight: "bold"
 	},
-	ft1:{
-		marginTop:20,
-	
+	ft1: {
+		marginTop: 20,
+
 	},
-	ft2:{
-		marginTop:12,
-		marginRight:8,
-		fontWeight:"bold",
-		textAlign:"center",
-		color:"white"
+	ft2: {
+		marginTop: 12,
+		marginRight: 8,
+		fontWeight: "bold",
+		textAlign: "center",
+		color: "white"
 	},
-	ft3:{
-		marginTop:12,
-		marginRight:8,
-		fontWeight:"bold",
-		textAlign:"center",
-		color:"black"
+	ft3: {
+		marginTop: 12,
+		marginRight: 8,
+		fontWeight: "bold",
+		textAlign: "center",
+		color: "black"
 	},
-	row:{
-flexDirection:"row"
+	row: {
+		flexDirection: "row"
 	},
-	button1:{
-		marginTop:25,
+	button1: {
+		marginTop: 25,
 		width: 260,
 		// paddingVertical: 7,
-		
+
 		height: 45,
 		borderRadius: 99,
 		borderWidth: 2,
@@ -75,23 +75,47 @@ flexDirection:"row"
 		backgroundColor: "black",
 		// paddingLeft: 10,
 	},
-	button3:{
-		marginTop:25,
+	button3: {
+		marginTop: 25,
 		width: 260,
 		// paddingVertical: 7,
-		
+
 		height: 45,
 		borderRadius: 99,
 		borderWidth: 2,
 		borderColor: "#eaeaea",
 		backgroundColor: "#fafafa",
 	},
-	acc:{
-textAlign:"center",
-marginTop:10
+	acc: {
+		textAlign: "center",
+		marginTop: 10
 	},
-	fv:{
-		marginTop:180
+	fv: {
+		marginTop: 180
+	},
+	text: {
+		fontSize: 30,
+		fontWeight: "bold",
+		textAlign: "center",
+		marginTop: 150
+	},
+	txtt: {
+		marginLeft: 30,
+		marginTop: 50
+	},
+	button4: {
+		marginTop: 25,
+		width: 260,
+		// paddingVertical: 7,
+		marginLeft: 50,
+		height: 45,
+		borderRadius: 99,
+		borderWidth: 2,
+		borderColor: "black",
+		backgroundColor: "black",
+	},
+	views: {
+		alignItems: "center"
 	}
 });
 
