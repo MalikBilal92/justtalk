@@ -4,7 +4,7 @@ const styles = StyleSheet.create({
 	myStyle: {
 		flex: 1,
 		backgroundColor: "white",
-		justifyContent: "center",
+		// justifyContent: "center",
 		alignItems: "center",
 	},
 	btnStyle: {
@@ -30,6 +30,73 @@ const styles = StyleSheet.create({
 		backgroundColor: "#fafafa",
 		paddingLeft: 10,
 	},
+	btn:{
+
+backgroundColor: 'black',
+color:"blue"
+// fontSize:24,
+// width:20,
+// height:20,
+},
+	text: {
+		color: 'Black',
+	},
+	ft:{
+		marginTop:20,
+		marginLeft:90,
+		fontWeight:"bold"
+	},
+	ft1:{
+		marginTop:20,
+	
+	},
+	ft2:{
+		marginTop:12,
+		marginRight:8,
+		fontWeight:"bold",
+		textAlign:"center",
+		color:"white"
+	},
+	ft3:{
+		marginTop:12,
+		marginRight:8,
+		fontWeight:"bold",
+		textAlign:"center",
+		color:"black"
+	},
+	row:{
+flexDirection:"row"
+	},
+	button1:{
+		marginTop:25,
+		width: 260,
+		// paddingVertical: 7,
+		
+		height: 45,
+		borderRadius: 99,
+		borderWidth: 2,
+		borderColor: "black",
+		backgroundColor: "black",
+		// paddingLeft: 10,
+	},
+	button3:{
+		marginTop:25,
+		width: 260,
+		// paddingVertical: 7,
+		
+		height: 45,
+		borderRadius: 99,
+		borderWidth: 2,
+		borderColor: "#eaeaea",
+		backgroundColor: "#fafafa",
+	},
+	acc:{
+textAlign:"center",
+marginTop:10
+	},
+	fv:{
+		marginTop:180
+	}
 });
 
 export default styles;
