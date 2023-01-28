@@ -1,14 +1,7 @@
 import React, { useRef, useState } from "react";
 import { View, Text, StatusBar, TouchableOpacity, Image } from "react-native";
 import { height, totalSize, width } from "react-native-dimension";
-import { Buttons, Wrapper, Spacer } from "../../../components";
-import {
-	appImages,
-	colors,
-	fontFamily,
-	fontSize,
-	routes,
-} from "../../../services";
+import { Buttons, Wrapper, Spacer } from "../../Components";
 import RBSheet from "react-native-raw-bottom-sheet";
 import { BackgroundImage } from "@rneui/base";
 function Home() {
