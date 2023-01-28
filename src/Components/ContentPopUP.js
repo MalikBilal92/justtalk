@@ -5,14 +5,12 @@ import {
 	StyleSheet,
 	Modal,
 	View,
-	Text,
-	Image,
+	TextInput,
 	Dimensions,
 	SafeAreaView,
 } from "react-native";
 import navigationStrings from "../Constants/navigationStrings";
-import ImagesPath from "../Constants/ImagesPath";
-import BtnComp from "./btnComp";
+
 const { width } = Dimensions.get("window");
 
 // create a component
@@ -34,19 +32,13 @@ const ContentPopUp = ({ navigation }) => {
 			>
 				<View style={styles.viewWrapper}>
 					<View style={styles.modalView}>
-						<Image
-							style={styles.doneImage}
-							source={ImagesPath.confirmationDone}
+						<TextInput
+							placeholder="Set Counter..."
+							// value={inputCountValue}
+							style={styles.textInput}
+							onChangeText={(value) => setInputCountValue(value)}
 						/>
-						<Text style={styles.heading}>
-							Password reset link sent to your email
-						</Text>
-						<BtnComp
-							name="Continue"
-							onPress={{}}
-							buttonColor="#363333"
-							textColor="white"
-						></BtnComp>
+						<Button title="Close" onPress={toggleModalVisibility} />
 					</View>
 				</View>
 			</Modal>
@@ -56,6 +48,12 @@ const ContentPopUp = ({ navigation }) => {
 
 // define your styles
 const styles = StyleSheet.create({
+	container: {
+		flex: 1,
+		justifyContent: "center",
+		alignItems: "center",
+		backgroundColor: "#2c3e50",
+	},
 	viewWrapper: {
 		flex: 1,
 		alignItems: "center",
@@ -64,29 +62,16 @@ const styles = StyleSheet.create({
 	},
 	modalView: {
 		alignItems: "center",
-		// justifyContent: "center",
+		justifyContent: "center",
 		// position: "absolute",
 		top: "40%",
 		left: "40%",
 		elevation: 5,
 		transform: [{ translateX: -(width * 0.4) }, { translateY: -90 }],
-		height: 400,
+		height: 350,
 		width: width,
 		backgroundColor: "#fff",
-		borderRadius: 60,
-	},
-	doneImage: {
-		width: 100,
-		height: 100,
-		marginVertical: 30,
-	},
-	heading: {
-		fontSize: 24,
-		fontStyle: "Bold",
-		fontWeight: "bold",
-		marginVertical: 25,
-		textAlign: "center",
-		marginHorizontal: 70,
+		borderRadius: 7,
 	},
 });
 
