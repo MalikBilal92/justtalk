@@ -21,7 +21,7 @@ const ContentPopUp = ({ name, Description, image }) => {
 	const navigation = useNavigation();
 	const toggleModalVisibility = () => {
 		setModalVisible(!isModalVisible);
-		navigation.navigate("login");
+		navigation.navigate(navigationStrings.HOME);
 	};
 
 	return (
