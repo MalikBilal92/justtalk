@@ -5,21 +5,23 @@ import {
 	StyleSheet,
 	Modal,
 	View,
-	TextInput,
+	Text,
+	Image,
 	Dimensions,
 	SafeAreaView,
 } from "react-native";
 import navigationStrings from "../Constants/navigationStrings";
-
+import ImagesPath from "../Constants/ImagesPath";
+import BtnComp from "./btnComp";
 const { width } = Dimensions.get("window");
-
+import { useNavigation } from "@react-navigation/native";
 // create a component
-const ContentPopUp = ({ navigation }) => {
+const ContentPopUp = ({ name, Description, image }) => {
 	const [isModalVisible, setModalVisible] = useState(true);
-
+	const navigation = useNavigation();
 	const toggleModalVisibility = () => {
 		setModalVisible(!isModalVisible);
-		// navigation.navigate("signup");
+		navigation.navigate("login");
 	};
 
 	return (
@@ -32,13 +34,14 @@ const ContentPopUp = ({ navigation }) => {
 			>
 				<View style={styles.viewWrapper}>
 					<View style={styles.modalView}>
-						<TextInput
-							placeholder="Set Counter..."
-							// value={inputCountValue}
-							style={styles.textInput}
-							onChangeText={(value) => setInputCountValue(value)}
-						/>
-						<Button title="Close" onPress={toggleModalVisibility} />
+						<Image style={styles.doneImage} source={ImagesPath.checkCircle} />
+						<Text style={styles.heading}>Content PopUp</Text>
+						<BtnComp
+							name="Start Talk"
+							onPress={toggleModalVisibility}
+							buttonColor="#F6CD5B"
+							textColor="black"
+						></BtnComp>
 					</View>
 				</View>
 			</Modal>
@@ -48,12 +51,6 @@ const ContentPopUp = ({ navigation }) => {
 
 // define your styles
 const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		justifyContent: "center",
-		alignItems: "center",
-		backgroundColor: "#2c3e50",
-	},
 	viewWrapper: {
 		flex: 1,
 		alignItems: "center",
@@ -62,16 +59,29 @@ const styles = StyleSheet.create({
 	},
 	modalView: {
 		alignItems: "center",
-		justifyContent: "center",
+		// justifyContent: "center",
 		// position: "absolute",
 		top: "40%",
 		left: "40%",
 		elevation: 5,
 		transform: [{ translateX: -(width * 0.4) }, { translateY: -90 }],
-		height: 350,
+		height: 400,
 		width: width,
 		backgroundColor: "#fff",
-		borderRadius: 7,
+		borderRadius: 60,
+	},
+	doneImage: {
+		width: 100,
+		height: 100,
+		marginVertical: 30,
+	},
+	heading: {
+		fontSize: 24,
+		fontStyle: "Bold",
+		fontWeight: "bold",
+		marginVertical: 25,
+		textAlign: "center",
+		marginHorizontal: 70,
 	},
 });
 
