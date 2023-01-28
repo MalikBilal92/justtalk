@@ -11,12 +11,11 @@ import {
 	SafeAreaView,
 } from "react-native";
 import navigationStrings from "../Constants/navigationStrings";
-import ImagesPath from "../Constants/ImagesPath";
 import BtnComp from "./btnComp";
 const { width } = Dimensions.get("window");
 import { useNavigation } from "@react-navigation/native";
 // create a component
-const ContentPopUp = ({ name, Description, image }) => {
+const ContentPopUp = ({ name, Description, image, data }) => {
 	const [isModalVisible, setModalVisible] = useState(true);
 	const navigation = useNavigation();
 	const toggleModalVisibility = () => {
@@ -34,8 +33,9 @@ const ContentPopUp = ({ name, Description, image }) => {
 			>
 				<View style={styles.viewWrapper}>
 					<View style={styles.modalView}>
-						<Image style={styles.doneImage} source={ImagesPath.checkCircle} />
-						<Text style={styles.heading}>Content PopUp</Text>
+						<Image style={styles.doneImage} source={image} />
+						<Text style={styles.heading}>{name}</Text>
+						<Text style={styles.des}>{Description}</Text>
 						<BtnComp
 							name="Start Talk"
 							onPress={toggleModalVisibility}
@@ -61,25 +61,32 @@ const styles = StyleSheet.create({
 		alignItems: "center",
 		// justifyContent: "center",
 		// position: "absolute",
-		top: "40%",
+		top: "35%",
 		left: "40%",
 		elevation: 5,
 		transform: [{ translateX: -(width * 0.4) }, { translateY: -90 }],
-		height: 400,
+		height: 500,
 		width: width,
 		backgroundColor: "#fff",
 		borderRadius: 60,
 	},
 	doneImage: {
-		width: 100,
-		height: 100,
-		marginVertical: 30,
+		width: 450,
+		borderTopLeftRadius: 75,
+		borderTopRightRadius: 75,
+		height: 250,
 	},
 	heading: {
 		fontSize: 24,
 		fontStyle: "Bold",
 		fontWeight: "bold",
 		marginVertical: 25,
+		textAlign: "center",
+		marginHorizontal: 70,
+	},
+	des: {
+		fontSize: 16,
+		marginVertical: 5,
 		textAlign: "center",
 		marginHorizontal: 70,
 	},
