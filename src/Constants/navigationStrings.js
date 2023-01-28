@@ -3,4 +3,6 @@ export default {
 	LOGIN: "login",
 	SIGNUP: "signup",
 	HOME: "home",
+	NEWACCOUNT: "newaccount",
+	FORGOTPASSWORD:"ForgotPassword",
 };
