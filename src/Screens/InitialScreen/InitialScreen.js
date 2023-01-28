@@ -2,14 +2,14 @@ import {
 	StyleSheet,
 	Text,
 	View,
-	ImageBackground,
+
 	SafeAreaView,
 	TouchableOpacity,
 } from "react-native";
 import { useState } from "react";
-import ContentPopUp from "../../Components/ContentPopUp";
+import ContentPopUp from "../../Components/ContentPopUP";
 import colors from "../../styles/colors";
-import StatusPopUp from "../../Components/StatusPopUP";
+
 
 const InitialScreen = ({ navigation }) => {
 	const [handleshow, setHandleshow] = useState(false);
