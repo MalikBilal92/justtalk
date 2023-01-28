@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { View, Text, Button } from "react-native";
-import ContentPopUp from "../../Components/ContentPopUp";
+import ContentPopUp from "../../Components/ContentPopUP";
 import styles from "../styles";
 const Home = () => {
 	const [handleshow, setHandleshow] = useState(false);
