@@ -6,12 +6,14 @@ import {
 	SafeAreaView,
 	TouchableOpacity,
 } from "react-native";
-import React from "react";
-import ImagesPath from "../../Constants/ImagesPath";
+import { useState } from "react";
+import ContentPopUp from "../../Components/ContentPopUp";
 import colors from "../../styles/colors";
+import StatusPopUp from "../../Components/StatusPopUP";
 
 const InitialScreen = ({ navigation }) => {
-	ImagesPath;
+	const [handleshow, setHandleshow] = useState(false);
+
 	// const { navigation } = props.navigation;
 	return (
 		<View style={{ flex: 1, justifyContent: "center" }}>
@@ -24,10 +26,11 @@ const InitialScreen = ({ navigation }) => {
 				</TouchableOpacity>
 				<TouchableOpacity
 					style={styles.btn1}
-					onPress={() => navigation.navigate("home")}
+					onPress={() => setHandleshow(!handleshow)}
 				>
 					<Text style={styles.text}>Sign Up</Text>
 				</TouchableOpacity>
+				{handleshow && <ContentPopUp />}
 			</SafeAreaView>
 		</View>
 	);
