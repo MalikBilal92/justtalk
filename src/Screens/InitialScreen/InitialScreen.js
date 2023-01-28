@@ -6,7 +6,7 @@ import {
 	TouchableOpacity,
 } from "react-native";
 import { useState } from "react";
-import ContentPopUp from "../../Components/ContentPopUp";
+import StatusPopUp from "../../Components/StatusPopUp";
 import colors from "../../styles/colors";
 
 const InitialScreen = ({ navigation }) => {
@@ -28,7 +28,7 @@ const InitialScreen = ({ navigation }) => {
 				>
 					<Text style={styles.text}>Sign Up</Text>
 				</TouchableOpacity>
-				{handleshow && <ContentPopUp />}
+				{handleshow && <StatusPopUp />}
 			</SafeAreaView>
 		</View>
 	);
