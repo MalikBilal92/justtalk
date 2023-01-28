@@ -1,18 +1,10 @@
-import React, { useRef, useState } from "react";
-import { View, Text, StatusBar, TouchableOpacity, Image } from "react-native";
-import { height, width } from "react-native-dimension";
-import { Buttons, Wrapper, Spacer } from "../../Components";
-// import {
-//   appImages,
-//   colors,
-//   fontSize,
-//   routes,
-//   sizes,
-// } from '../../../services';
-import RBSheet from "react-native-raw-bottom-sheet";
-import { BackgroundImage } from "@rneui/base";
-// import { styles } from "../../../components/modals/styles";
-import ImagesPath from "../../Constants/ImagesPath";
+import React, { useState } from "react";
+import { View, Text, Button } from "react-native";
+import ContentPopUp from "../../Components/ContentPopUp";
+import styles from "../styles";
+const Home = () => {
+	const [handleshow, setHandleshow] = useState(false);
+	console.log("numValue", myNum);
 
 function Home() {
 	const refRBSheet = useRef();

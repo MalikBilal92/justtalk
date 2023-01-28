@@ -3,8 +3,10 @@ import React from "react";
 import styles from "../styles";
 import ImagesPath from "../../Constants/ImagesPath";
 import { Image } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
-const Login = ({navigation}) => {
+const Login = () => {
+	const navigation = useNavigation();
 	return (
 		<View style={styles.myStyle}>
 			<Image source={ImagesPath.iconImage} style={{ marginTop: 100 }} />
@@ -23,28 +25,28 @@ const Login = ({navigation}) => {
 				/>
 			</View>
 			<View style={styles.row}>
-<Text style={styles.ft1}> Remember me</Text>
-		
-			<TouchableOpacity style={styles.button} >
-        <Text style={styles.ft}>Forgot Password?</Text>
-      </TouchableOpacity>
-	  </View>
+				<Text style={styles.ft1}> Remember me</Text>
 
-	  <View>
-	  <TouchableOpacity style={styles.button1} >
-        <Text style={styles.ft2}>LOG IN</Text>
-      </TouchableOpacity>
-	
-	  </View>
-	  <View style={styles.fv}>
-		<Text style={styles.acc}> 
-			Don't have an account?
-		</Text>
-	  <TouchableOpacity style={styles.button3} onPress={() => navigation.navigate("newaccount")} >
-        <Text style={styles.ft3}>CREATE AN ACCOUNT</Text>
-      </TouchableOpacity>
-	
-	  </View>
+				<TouchableOpacity style={styles.button} onPress={() => navigation.navigate("ForgotPassword")}>
+					<Text style={styles.ft}>Forgot Password?</Text>
+				</TouchableOpacity>
+			</View>
+
+			<View>
+				<TouchableOpacity style={styles.button1} >
+					<Text style={styles.ft2}>LOG IN</Text>
+				</TouchableOpacity>
+
+			</View>
+			<View style={styles.fv}>
+				<Text style={styles.acc}>
+					Don't have an account?
+				</Text>
+				<TouchableOpacity style={styles.button3} onPress={() => navigation.navigate("newaccount")} >
+					<Text style={styles.ft3}>CREATE AN ACCOUNT</Text>
+				</TouchableOpacity>
+
+			</View>
 		</View>
 	);
 };
