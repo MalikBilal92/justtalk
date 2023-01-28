@@ -1,11 +1,16 @@
-import React, { useState } from "react";
-import { View, Text, Button } from "react-native";
-import ContentPopUp from "../../Components/ContentPopUp";
-import styles from "../styles";
-const Home = () => {
-	const [handleshow, setHandleshow] = useState(false);
-	console.log("numValue", myNum);
-
+import React, { useRef, useState } from "react";
+import { View, Text, StatusBar, TouchableOpacity, Image } from "react-native";
+import { height, totalSize, width } from "react-native-dimension";
+import { Buttons, Wrapper, Spacer } from "../../../components";
+import {
+	appImages,
+	colors,
+	fontFamily,
+	fontSize,
+	routes,
+} from "../../../services";
+import RBSheet from "react-native-raw-bottom-sheet";
+import { BackgroundImage } from "@rneui/base";
 function Home() {
 	const refRBSheet = useRef();
 	// const arr=new Array(7);
@@ -46,7 +51,7 @@ function Home() {
 	];
 	return (
 		<Wrapper isMain style={[{}]}>
-			<StatusBar backgroundColor={'#F6CD5B'} />
+			<StatusBar backgroundColor={"#F6CD5B"} />
 			<View style={{ flex: 0.2 }}>
 				<Text style={styles.chatRoomText}>These Chatrooms, You Bet!</Text>
 				<Text style={styles.jionRoomText}>Join Any Room Now</Text>
