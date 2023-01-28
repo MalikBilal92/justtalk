@@ -24,6 +24,11 @@ export default function (Stack) {
 				component={Home}
 				options={{ headerShown: false }}
 			/>
+			{/* <Stack.Screen
+				name={navigationStrings.HOME}
+				component={Home}
+				options={{ headerShown: false }}
+			/> */}
 		</>
 	);
 
