@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { View, Text, Button } from "react-native";
-import ContentPopUp from "../../Components/ContentPopUP";
+import StatusPopUp from "../../Components/StatusPopUP";
 import styles from "../styles";
 const Home = () => {
 	const [myNum, setNum] = useState(10);
@@ -14,7 +14,7 @@ const Home = () => {
 		<View style={styles.myStyle}>
 			<Text>Please subscribe my channel</Text>
 			<Button title="Press me" onPress={() => setHandleshow(!handleshow)} />
-			{handleshow && <ContentPopUp />}
+			{handleshow && <StatusPopUp />}
 		</View>
 	);
 };
