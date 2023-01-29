@@ -1,5 +1,12 @@
 import React from "react";
-import { InitialScreen, Login, Signup, Home, NewAccount, ForgotPassword } from "../Screens";
+import {
+	InitialScreen,
+	Login,
+	Signup,
+	Home,
+	NewAccount,
+	ForgotPassword,
+} from "../Screens";
 import navigationStrings from "../Constants/navigationStrings";
 export default function (Stack) {
 	return (
@@ -25,16 +32,10 @@ export default function (Stack) {
 				options={{ headerShown: false }}
 			/>
 			<Stack.Screen
-				name={navigationStrings.NEWACCOUNT}
-				component={NewAccount}
-				options={{ headerShown: false }}
-			/>
-			<Stack.Screen
 				name={navigationStrings.FORGOTPASSWORD}
 				component={ForgotPassword}
 				options={{ headerShown: true }}
 			/>
 		</>
 	);
-
 }
