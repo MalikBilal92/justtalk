@@ -15,39 +15,53 @@ function Home() {
 	const [handleshow, setHandleshow] = useState(false);
 	const arr = [
 		{
+			id: 1,
 			image: ImagesPath.houseParty,
 			poster: ImagesPath.housePartyPosters,
 			name: "House Party",
+			members: 137,
 		},
 		{
+			id: 2,
 			poster: ImagesPath.kittyChatsPosters,
 			image: ImagesPath.kittyChats,
 			name: "Kitty Chats",
+			members: 136,
 		},
 		{
+			id: 3,
 			poster: ImagesPath.foodClubPosters,
 			image: ImagesPath.foodClub,
 			name: "Food Club",
+			members: 135,
 		},
 		{
+			id: 4,
 			poster: ImagesPath.bdPartyPosters,
 			image: ImagesPath.bdParty,
 			name: "Birthday Party",
+			members: 134,
 		},
 		{
+			id: 5,
 			poster: ImagesPath.raveRoomPosters,
 			image: ImagesPath.raveRoom,
 			name: "Rave Room",
+			members: 133,
 		},
 		{
+			id: 6,
 			poster: ImagesPath.pineApplePartyPosters,
 			image: ImagesPath.pineAppleParty,
 			name: "Pineapple Party",
+			members: 132,
 		},
 		{
+			id: 7,
 			poster: ImagesPath.frindSquadPosters,
 			image: ImagesPath.frindSquad,
 			name: "Friends Squad",
+			members: 131,
 		},
 	];
 	return (
@@ -83,7 +97,7 @@ function Home() {
 					}}
 				>
 					<Image source={ImagesPath.logo} style={styles.imageStyle} />
-					{arr.map((item, index) => {
+					{arr.map((item, key) => {
 						return (
 							<TouchableOpacity
 								onPress={() => {
@@ -96,9 +110,9 @@ function Home() {
 									alignItems: "center",
 									position: "absolute",
 									transform: [
-										{ rotate: `${angle * index}deg` },
+										{ rotate: `${angle * key}deg` },
 										{ translateY: -circleRadius },
-										{ rotate: `-${angle * index}deg` },
+										{ rotate: `-${angle * key}deg` },
 									],
 								}}
 							>
