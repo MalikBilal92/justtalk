@@ -60,7 +60,7 @@ const Login = () => {
 				<TouchableOpacity
 					style={styles.button3}
 					onPress={() => {
-						navigation.navigate(navigationStrings.NEWACCOUNT);
+						navigation.navigate(navigationStrings.SIGNUP);
 					}}
 				>
 					<Text style={styles.ft3}>CREATE AN ACCOUNT</Text>
