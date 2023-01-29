@@ -6,6 +6,7 @@ import {
 	Home,
 	NewAccount,
 	ForgotPassword,
+	Chat,
 } from "../Screens";
 import navigationStrings from "../Constants/navigationStrings";
 export default function (Stack) {
@@ -34,6 +35,11 @@ export default function (Stack) {
 			<Stack.Screen
 				name={navigationStrings.FORGOTPASSWORD}
 				component={ForgotPassword}
+				options={{ headerShown: true }}
+			/>
+			<Stack.Screen
+				name={navigationStrings.CHAT}
+				component={Chat}
 				options={{ headerShown: true }}
 			/>
 		</>
