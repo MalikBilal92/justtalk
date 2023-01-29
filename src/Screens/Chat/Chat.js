@@ -8,7 +8,6 @@ import {
 	StyleSheet,
 } from "react-native";
 import { height, totalSize, width } from "react-native-dimension";
-import { Icon } from "@rneui/base";
 import {
 	GiftedChat,
 	InputToolbar,
@@ -18,6 +17,8 @@ import {
 import navigationStrings from "../../Constants/navigationStrings";
 import { useNavigation } from "@react-navigation/native";
 import ImagesPath from "../../Constants/ImagesPath";
+// import { ChevronLeftIcon } from "@primer/octicons-react";
+
 // const arr = [
 // 	{
 // 		id: 1,
@@ -62,10 +63,10 @@ import ImagesPath from "../../Constants/ImagesPath";
 // 		name: "Friends Squad",
 // 	},
 // ];
-function Chat({ data }) {
+function Chat({ route }) {
 	const [messages, setMessages] = useState([]);
-	const [name, image, id, members] = data;
-	console.log("parrram", param);
+	const [name, image, id, members] = route.param.data;
+	console.log("parrram", route.param);
 	const navigation = useNavigation();
 
 	const onSend = (messages = []) => {
@@ -89,7 +90,7 @@ function Chat({ data }) {
 					onPress={() => navigation.navigate(navigationStrings.HOME)}
 					style={{ marginHorizontal: width(3) }}
 				>
-					<Icon name="chevron-back" type="ionicon" color="#000" size={25} />
+					{/* <ChevronLeftIcon color="#000" size={25} /> */}
 				</TouchableOpacity>
 				<View style={{ flexDirection: "row", alignItems: "center" }}>
 					<Image
