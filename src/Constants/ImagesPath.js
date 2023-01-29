@@ -18,6 +18,6 @@ export default {
 	kittyChatsPosters: require("../assets/Images/Posters/KittyChats/3x.png"),
 	pineApplePartyPosters: require("../assets/Images/Posters/PineAppleParty/3x.png"),
 	raveRoomPosters: require("../assets/Images/Posters/RaveRoom/3x.png"),
-	// bdParty: require("../assets/Images/check-circle/ss.png"),
-	// bdParty: require("../assets/Images/check-circle/ss.png"),
+	sent: require("../assets/Images/icons/send.png"),
+	dummy: require("../assets/Images/icons/dummy.png"),
 };
