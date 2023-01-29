@@ -4,5 +4,6 @@ export default {
 	SIGNUP: "signup",
 	HOME: "home",
 	NEWACCOUNT: "newaccount",
-	FORGOTPASSWORD:"ForgotPassword",
+	FORGOTPASSWORD: "ForgotPassword",
+	CHAT: "chat",
 };
