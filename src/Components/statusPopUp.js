@@ -21,7 +21,7 @@ const StatusPopUp = () => {
 	const navigation = useNavigation();
 	const toggleModalVisibility = () => {
 		setModalVisible(!isModalVisible);
-		navigation.navigate("login");
+		navigation.navigate(navigationStrings.LOGIN);
 	};
 
 	return (
