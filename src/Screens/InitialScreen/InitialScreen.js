@@ -8,6 +8,7 @@ import {
 import { useState } from "react";
 import StatusPopUp from "../../Components/StatusPopUp";
 import colors from "../../styles/colors";
+import navigationStrings from "../../Constants/navigationStrings";
 
 const InitialScreen = ({ navigation }) => {
 	const [handleshow, setHandleshow] = useState(false);
@@ -18,7 +19,7 @@ const InitialScreen = ({ navigation }) => {
 			<SafeAreaView>
 				<TouchableOpacity
 					style={styles.btn}
-					onPress={() => navigation.navigate("login")}
+					onPress={() => navigation.navigate(navigationStrings.LOGIN)}
 				>
 					<Text style={styles.text}>Login</Text>
 				</TouchableOpacity>
