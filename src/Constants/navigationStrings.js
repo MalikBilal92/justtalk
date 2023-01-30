@@ -1,9 +1,8 @@
 export default {
 	INITIAL_SCREEN: "InitialScreen",
-	LOGIN: "login",
-	SIGNUP: "signup",
-	HOME: "home",
-	NEWACCOUNT: "newaccount",
+	LOGIN: "Login",
+	SIGNUP: "Signup",
+	HOME: "Home",
 	FORGOTPASSWORD: "ForgotPassword",
-	CHAT: "chat",
+	CHATSCREEN: "ChatScreen",
 };
