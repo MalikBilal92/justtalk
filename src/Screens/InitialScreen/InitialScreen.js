@@ -25,7 +25,7 @@ const InitialScreen = ({ navigation }) => {
 				</TouchableOpacity>
 				<TouchableOpacity
 					style={styles.btn1}
-					onPress={() => setHandleshow(!handleshow)}
+					onPress={() => navigation.navigate(navigationStrings.CHATSCREEN)}
 				>
 					<Text style={styles.text}>Sign Up</Text>
 				</TouchableOpacity>
