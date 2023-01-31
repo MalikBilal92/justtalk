@@ -39,7 +39,7 @@ export default function (Stack) {
 			<Stack.Screen
 				name={navigationStrings.CHATSCREEN}
 				component={ChatScreen}
-				options={{ headerShown: true }}
+				options={{ headerShown: false }}
 			/>
 		</>
 	);
