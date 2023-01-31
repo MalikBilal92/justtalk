@@ -15,7 +15,7 @@ const ForgotPassword = () => {
 			<Text style={styles.text}>Enter your email to reset your password</Text>
 			<Text style={styles.txtt}>Email</Text>
 			<View style={styles.views}>
-				<TextInput style={styles.TextInput} placeholder="Email" />
+				<TextInput style={styles.TextInput} placeholder="abc@gmail.com" />
 			</View>
 			<TouchableOpacity
 				style={styles.button4}
