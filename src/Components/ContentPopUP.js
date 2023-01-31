@@ -20,7 +20,12 @@ const ContentPopUp = ({ name, Description, image, data }) => {
 	const navigation = useNavigation();
 	const toggleModalVisibility = () => {
 		setModalVisible(!isModalVisible);
-		navigation.navigate(navigationStrings.CHATSCREEN);
+		navigation.navigate(navigationStrings.CHATSCREEN, {
+			title: name,
+			id: data.id,
+			image: data.image,
+			members: data.members,
+		});
 	};
 
 	return (
