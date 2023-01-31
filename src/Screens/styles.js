@@ -27,41 +27,39 @@ const styles = StyleSheet.create({
 		paddingLeft: 10,
 	},
 	btn: {
-
-		backgroundColor: 'black',
-		color: "blue"
+		backgroundColor: "black",
+		color: "blue",
 		// fontSize:24,
 		// width:20,
 		// height:20,
 	},
 	text: {
-		color: 'Black',
+		color: "Black",
 	},
 	ft: {
 		marginTop: 20,
 		marginLeft: 90,
-		fontWeight: "bold"
+		fontWeight: "bold",
 	},
 	ft1: {
 		marginTop: 20,
-
 	},
 	ft2: {
 		marginTop: 12,
 		marginRight: 8,
 		fontWeight: "bold",
 		textAlign: "center",
-		color: "white"
+		color: "white",
 	},
 	ft3: {
 		marginTop: 12,
 		marginRight: 8,
 		fontWeight: "bold",
 		textAlign: "center",
-		color: "black"
+		color: "black",
 	},
 	row: {
-		flexDirection: "row"
+		flexDirection: "row",
 	},
 	button1: {
 		marginTop: 25,
@@ -88,20 +86,20 @@ const styles = StyleSheet.create({
 	},
 	acc: {
 		textAlign: "center",
-		marginTop: 10
+		marginTop: 10,
 	},
 	fv: {
-		marginTop: 180
+		marginTop: 180,
 	},
 	text: {
 		fontSize: 30,
 		fontWeight: "bold",
 		textAlign: "center",
-		marginTop: 150
+		marginTop: 150,
 	},
 	txtt: {
-		marginLeft: 30,
-		marginTop: 50
+		marginLeft: 50,
+		marginTop: 50,
 	},
 	button4: {
 		marginTop: 25,
@@ -115,8 +113,8 @@ const styles = StyleSheet.create({
 		backgroundColor: "black",
 	},
 	views: {
-		alignItems: "center"
-	}
+		alignItems: "center",
+	},
 });
 
 export default styles;
