@@ -65,8 +65,8 @@ import ImagesPath from "../../Constants/ImagesPath";
 // ];
 function Chat({ route }) {
 	const [messages, setMessages] = useState([]);
-	const [name, image, id, members] = route.param.data;
-	console.log("parrram", route.param);
+	const [name, image, id, members] = route;
+	console.log("parrram", route);
 	const navigation = useNavigation();
 
 	const onSend = (messages = []) => {
@@ -178,7 +178,7 @@ function Chat({ route }) {
 									style={{
 										marginHorizontal: width(5),
 										fontSize: totalSize(1.3),
-										color: colors.welcome,
+										color: "#111820",
 									}}
 								>
 									{name}
@@ -224,7 +224,7 @@ function Chat({ route }) {
 										<Text
 											style={{
 												fontSize: totalSize(1.6),
-												color: colors.welcome,
+												color: "#111820",
 												maxWidth: width(55),
 												textAlign:
 													props?.user?._id != props?.currentMessage?.user?._id
@@ -251,7 +251,7 @@ const styles = StyleSheet.create({
 	chatScreenHeader: {
 		flexDirection: "row",
 		height: totalSize(10),
-		backgroundColor: colors.yellow,
+		backgroundColor: "#F6CD5B",
 		alignItems: "center",
 	},
 	headerImageStyle: {
@@ -261,12 +261,12 @@ const styles = StyleSheet.create({
 	},
 	headerNameText: {
 		fontSize: totalSize(1.9),
-		fontFamily: fontFamily.appTextBold,
-		color: colors.welcome,
+		// fontFamily: fontFamily.appTextBold,
+		color: "#111820",
 	},
 	headerMemberText: {
 		fontSize: totalSize(1.4),
-		fontFamily: fontFamily.appTextRegular,
-		color: colors.welcome,
+		// fontFamily: fontFamily.appTextRegular,
+		color: "#111820",
 	},
 });
